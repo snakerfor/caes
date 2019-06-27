@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>若依管理系统首页</title>
+    <meta name="keywords" content="学生能力测评系统首页">
+    <meta name="description" content="学生能力测评系统首页">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link th:href="@{favicon.ico}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/jquery.contextMenu.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/animate.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/skins.css}" rel="stylesheet"/>
+    <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
+    <style type="text/css">
+        .sys_name {
+            font-size:26px;
+            color: green;
+        }
+    </style>
+</head>
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="container" style="padding-top: 10px;">
+            <div class="border-bottom white-bg">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-collapse collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active sys_name">
+                                <a aria-expanded="false" role="button" href="/index"> 学生能力测评系统 </a>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 能力测评 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href=""></a></li>
+                                    <li><a th:href="@{test/profess/index}">专业报考测评</a></li>
+                                    <li><a th:href="@{test/profess/index}">创新能力测评</a></li>
+                                    <li><a href="">创业能力测评</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 职业测评 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="">职业兴趣</a></li>
+                                    <li><a href="">职业技能</a></li>
+                                    <li><a href="">价值观</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 结果查询 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="">测评报告</a></li>
+                                    <li><a href="">职业推荐</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 个人信息 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="">个人信息</a></li>
+                                    <li><a href="">职业历程</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <a th:href="@{/logout}">
+                                    <i class="fa fa-sign-out"></i> 退出
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<ul class="nav navbar-top-links navbar-right"><li><a rel="nofollow"  target="_blank" href="https://item.taobao.com/item.htm?id=566923710004"><i class="fa fa-shopping-cart  btn btn-primary "></i>立即购买</a></li><li><a rel="nofollow"  target="_blank" href="http://www.ngui.cc/gsearch.html"><i class="fa fa-shopping-cart  btn btn-primary "></i>更多模板</a></li></ul>-->
+                </nav>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content" style="padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>历史评测记录</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">配置选项 1</a>
+                                        </li>
+                                        <li><a href="#">配置选项 2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-9 m-b-xs">
+                                        <div data-toggle="buttons" class="btn-group">
+                                            <label class="btn btn-sm btn-white"> <input type="radio" id="option1"
+                                                                                        name="options"> 天 </label>
+                                            <label class="btn btn-sm btn-white active"> <input type="radio" id="option2"
+                                                                                               name="options"> 周
+                                            </label>
+                                            <label class="btn btn-sm btn-white"> <input type="radio" id="option3"
+                                                                                        name="options"> 月 </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="input-group"><input type="text" placeholder="搜索"
+                                                                        class="input-sm form-control"> <span
+                                                class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span></div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>学号</th>
+                                            <th>姓名</th>
+                                            <th>评测类型</th>
+                                            <th>评测结果</th>
+                                            <th>评测时间</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>022022</td>
+                                            <td>黄晓明</td>
+                                            <td>报考专业测评</td>
+                                            <td>旅游管理</td>
+                                            <td>2019.06.22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>022022</td>
+                                            <td>黄晓明</td>
+                                            <td>创新能力测评</td>
+                                            <td>旅游管理</td>
+                                            <td>2019.06.22</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+<script th:src="@{/js/jquery.contextMenu.min.js}"></script>
+<script th:src="@{/ajax/libs/blockUI/jquery.blockUI.js}"></script>
+<script th:src="@{/ajax/libs/layer/layer.min.js}"></script>
+<script th:src="@{/ruoyi/js/ry-ui.js?v=3.4.0}"></script>
+<script th:src="@{/ruoyi/index.js}"></script>
+<script th:src="@{/ajax/libs/fullscreen/jquery.fullscreen.js}"></script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+        /*用户管理-重置密码*/
+        function resetPwd() {
+            var url = ctx + 'system/user/profile/resetPwd';
+            $.modal.open("重置密码", url, '800', '500');
+        }
+</script>
+</body>
+</html>

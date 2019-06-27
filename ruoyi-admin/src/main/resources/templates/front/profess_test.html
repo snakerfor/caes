@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>若依管理系统首页</title>
+    <meta name="keywords" content="若依管理系统首页">
+    <meta name="description" content="若依管理系统首页">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link th:href="@{favicon.ico}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/jquery.contextMenu.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/animate.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/skins.css}" rel="stylesheet"/>
+    <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
+    <style type="text/css">
+        .sys_name {
+            font-size:26px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="container" style="padding-top: 10px;">
+            <div class="border-bottom white-bg">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-collapse collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active sys_name">
+                                <a aria-expanded="false" role="button" href="/index"> 学生能力测评系统 </a>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 能力测评 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href=""></a></li>
+                                    <li><a th:href="@{test/profess/index}">专业报考测评</a></li>
+                                    <li><a th:href="@{test/profess/index}">创新能力测评</a></li>
+                                    <li><a href="">创业能力测评</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 职业测评 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="">职业兴趣</a></li>
+                                    <li><a href="">职业技能</a></li>
+                                    <li><a href="">价值观</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 结果查询 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="">测评报告</a></li>
+                                    <li><a href="">职业推荐</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown"> 个人信息 <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="">个人信息</a></li>
+                                    <li><a href="">职业历程</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <a th:href="@{/logout}">
+                                    <i class="fa fa-sign-out"></i> 退出
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<ul class="nav navbar-top-links navbar-right"><li><a rel="nofollow"  target="_blank" href="https://item.taobao.com/item.htm?id=566923710004"><i class="fa fa-shopping-cart  btn btn-primary "></i>立即购买</a></li><li><a rel="nofollow"  target="_blank" href="http://www.ngui.cc/gsearch.html"><i class="fa fa-shopping-cart  btn btn-primary "></i>更多模板</a></li></ul>-->
+                </nav>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content" style="padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <form method="get" class="form-horizontal">
+                                    <!--<div class="form-group" >-->
+                                        <!--<label class="col-sm-6 control-label" style="text-align: left;">1、是否关注时政新闻？-->
+                                        <!--</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<div class="col-sm-6 col-sm-offset-1">-->
+                                            <!--<input type="radio" value="1"-->
+                                                   <!--name="optionsRadios">是</label>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-6 col-sm-offset-1">-->
+                                            <!--<input type="radio" value="0"-->
+                                                   <!--name="optionsRadios">否</label>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="hr-line-dashed"></div>-->
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">2、是否对某些物理现象感兴趣？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">3、是否关注时政新闻？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">4、是否对某些物理现象感兴趣？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">5、是否关注时政新闻？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">6、是否对某些物理现象感兴趣？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">7、是否关注时政新闻？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">8、是否对某些物理现象感兴趣？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">9、是否关注时政新闻？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">10、是否对某些物理现象感兴趣？
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="radio" value="1"
+                                                   name="optionsRadios">是</label>
+                                            <input type="radio" value="0"
+                                                   name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <div class="col-sm-7 col-sm-offset-5">
+                                            <button class="btn btn-primary" type="submit">提交答案</button>
+                                            <button class="btn btn-white" type="submit">退出测试</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+<script th:src="@{/js/jquery.contextMenu.min.js}"></script>
+<script th:src="@{/ajax/libs/blockUI/jquery.blockUI.js}"></script>
+<script th:src="@{/ajax/libs/layer/layer.min.js}"></script>
+<script th:src="@{/ruoyi/js/ry-ui.js?v=3.4.0}"></script>
+<script th:src="@{/ruoyi/index.js}"></script>
+<script th:src="@{/ajax/libs/fullscreen/jquery.fullscreen.js}"></script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+        /*用户管理-重置密码*/
+        function resetPwd() {
+            var url = ctx + 'system/user/profile/resetPwd';
+            $.modal.open("重置密码", url, '800', '500');
+        }
+</script>
+</body>
+</html>
