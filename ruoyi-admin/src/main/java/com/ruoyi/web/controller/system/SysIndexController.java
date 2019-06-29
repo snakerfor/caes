@@ -40,6 +40,21 @@ public class SysIndexController extends BaseController
         }
         return "index";
 
+    }
+
+
+    @GetMapping("/header")
+    public String header(ModelMap mmap)
+    {
+        // 取身份信息
+        SysUser user = ShiroUtils.getSysUser();
+        // 根据用户id取出菜单
+        List<SysMenu> menus = menuService.selectMenusByUser(user);
+        mmap.put("menus", menus);
+        mmap.put("user", user);
+        mmap.put("copyrightYear", Global.getCopyrightYear());
+        mmap.put("demoEnabled", Global.isDemoEnabled());
+        return "front/header";
 
     }
 

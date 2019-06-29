@@ -3072,7 +3072,7 @@ a:hover, a:focus {
     color: #ffffff;
     background-color: #ffffff;
     height: 1px;
-    margin: 20px 0;
+    margin: 16px 0;
 }
 
 .hr-line-solid {
@@ -3865,9 +3865,9 @@ table.table-mail tr td {
     color: #1ab394;
 }
 
-.text-primary {
-    color: inherit;
-}
+/*.text-primary {*/
+    /*color: inherit;*/
+/*}*/
 
 .text-success {
     color: #1c84c6;

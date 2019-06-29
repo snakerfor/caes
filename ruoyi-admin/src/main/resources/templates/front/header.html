@@ -1,0 +1,55 @@
+<div class="border-bottom white-bg">
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active sys_name">
+                    <a aria-expanded="false" role="button" href="/index"> 学生能力测评系统 </a>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                       data-toggle="dropdown"> 能力测评 <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href=""></a></li>
+                        <li><a th:href="@{/test/profess/index}">专业报考测评</a></li>
+                        <li><a th:href="@{/test/innovate/index}">创新能力测评</a></li>
+                        <li><a th:href="@{/test/business/index}">创业能力测评</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                       data-toggle="dropdown"> 职业测评 <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a th:href="@{/test/interest/index}">职业兴趣</a></li>
+                        <li><a th:href="@{/test/skill/index}">职业技能</a></li>
+                        <li><a th:href="@{/test/value/index}">价值观</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                       data-toggle="dropdown"> 结果查询 <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a th:href="@{/test/test_report/index}">测评报告</a></li>
+                        <li><a th:href="@{/test/career_report/index}">职业推荐</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
+                       data-toggle="dropdown"> 个人信息 <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a th:href="@{/test/person_info/index}">个人信息</a></li>
+                        <li><a th:href="@{/test/career_course/index}">职业历程</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a th:href="@{/logout}">
+                        <i class="fa fa-sign-out"></i> 退出
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--<ul class="nav navbar-top-links navbar-right"><li><a rel="nofollow"  target="_blank" href="https://item.taobao.com/item.htm?id=566923710004"><i class="fa fa-shopping-cart  btn btn-primary "></i>立即购买</a></li><li><a rel="nofollow"  target="_blank" href="http://www.ngui.cc/gsearch.html"><i class="fa fa-shopping-cart  btn btn-primary "></i>更多模板</a></li></ul>-->
+    </nav>
+</div>

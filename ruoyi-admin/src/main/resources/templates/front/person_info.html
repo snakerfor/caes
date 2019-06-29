@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>学生能力测评系统首页</title>
+    <meta name="keywords" content="学生能力测评系统首页">
+    <meta name="description" content="学生能力测评系统首页">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link th:href="@{favicon.ico}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/jquery.contextMenu.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/animate.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/skins.css}" rel="stylesheet"/>
+    <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
+    <style type="text/css">
+        .sys_name {
+            font-size:26px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div id="header" class="container" style="padding-top: 10px;">
+        </div>
+        <div class="wrapper wrapper-content" style="padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <table class="table table-striped table-bordered">
+                                    <caption>个人基本信息</caption>
+                                    <tbody>
+                                    <tr>
+                                        <td>学号：</td>
+                                        <td>560001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>姓名：</td>
+                                        <td>黄晓明</td>
+                                    </tr>
+                                    <tr>
+                                        <td>专业：</td>
+                                        <td>旅游管理</td>
+                                    </tr>
+                                    <tr>
+                                        <td>学历：</td>
+                                        <td>专科</td>
+                                    </tr>
+                                    <tr>
+                                        <td>入学年份：</td>
+                                        <td>2016</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+<script th:src="@{/js/jquery.contextMenu.min.js}"></script>
+<script th:src="@{/ajax/libs/blockUI/jquery.blockUI.js}"></script>
+<script th:src="@{/ajax/libs/layer/layer.min.js}"></script>
+<script th:src="@{/ruoyi/js/ry-ui.js?v=3.4.0}"></script>
+<script th:src="@{/ruoyi/index.js}"></script>
+<script th:src="@{/ajax/libs/fullscreen/jquery.fullscreen.js}"></script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+        /*用户管理-重置密码*/
+        $(function () {
+            $("#header").load(ctx+"header");
+        });
+</script>
+</body>
+</html>
