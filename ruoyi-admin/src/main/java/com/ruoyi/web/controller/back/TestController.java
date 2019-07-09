@@ -1,4 +1,4 @@
-package com.ruoyi.web.controller.test;
+package com.ruoyi.web.controller.back;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
