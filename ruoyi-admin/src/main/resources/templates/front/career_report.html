@@ -18,17 +18,12 @@
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <link th:href="@{/css/skins.css}" rel="stylesheet"/>
     <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
-    <style type="text/css">
-        .sys_name {
-            font-size:26px;
-            color: green;
-        }
-    </style>
+
 </head>
 <body class="top-navigation">
 <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
-        <div id="header" class="container" style="padding-top: 10px;">
+        <div id="header" class="container">
         </div>
         <div class="wrapper wrapper-content" style="padding-top: 20px;">
             <div class="container">
@@ -38,72 +33,43 @@
                             <div class="ibox-title">
                                 <h5>职业推荐记录</h5>
                                 <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <i class="fa fa-wrench"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">配置选项 1</a>
-                                        </li>
-                                        <li><a href="#">配置选项 2</a>
-                                        </li>
-                                    </ul>
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
+                                    <ol class="breadcrumb">
+                                        <li>结果查询</li>
+                                        <li class="active">职业推荐</li>
+                                    </ol>
                                 </div>
                             </div>
                             <div class="ibox-content">
-                                <div class="row">
-                                    <div class="col-sm-9 m-b-xs">
-                                        <div data-toggle="buttons" class="btn-group">
-                                            <label class="btn btn-sm btn-white"> <input type="radio" id="option1"
-                                                                                        name="options"> 天 </label>
-                                            <label class="btn btn-sm btn-white active"> <input type="radio" id="option2"
-                                                                                               name="options"> 周
-                                            </label>
-                                            <label class="btn btn-sm btn-white"> <input type="radio" id="option3"
-                                                                                        name="options"> 月 </label>
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">学号：</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" value="20160001" disabled>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
-                                        <div class="input-group"><input type="text" placeholder="搜索"
-                                                                        class="input-sm form-control"> <span
-                                                class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">姓名：</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" value="张三丰" disabled>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>序号</th>
-                                            <th>学号</th>
-                                            <th>姓名</th>
-                                            <th>评测结果</th>
-                                            <th>评测时间</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>022022</td>
-                                            <td>黄晓明</td>
-                                            <td>职业律师</td>
-                                            <td>2019.06.22</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>022022</td>
-                                            <td>黄晓明</td>
-                                            <td>高级工程师</td>
-                                            <td>2019.01.22</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">评测结果：</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" value="职业律师" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">评测时间：</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" value="2019-01-01" disabled>
+                                        </div>
+                                    </div>
+                                </form>
 
                             </div>
                         </div>
@@ -113,8 +79,12 @@
 
             </div>
         </div>
+        <div id="footer">
+
+        </div>
     </div>
 </div>
+
 <!-- 全局js -->
 <script th:src="@{/js/jquery.min.js}"></script>
 <script th:src="@{/js/bootstrap.min.js}"></script>
@@ -130,7 +100,8 @@
     var ctx = [[@{/}]];
         $(function () {
             $("#header").load(ctx+"header");
-        });
+            $("#footer").load(ctx + "footer");
+        })
 </script>
 </body>
 </html>

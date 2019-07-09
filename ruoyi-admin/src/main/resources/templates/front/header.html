@@ -2,14 +2,14 @@
     <nav class="navbar navbar-static-top" role="navigation">
         <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active sys_name">
+                <li class="sys_name">
+                    <img src="/img/logo.png">
                     <a aria-expanded="false" role="button" href="/index"> 学生能力测评系统 </a>
                 </li>
                 <li class="dropdown">
                     <a aria-expanded="false" role="button" href="#" class="dropdown-toggle"
                        data-toggle="dropdown"> 能力测评 <span class="caret"></span></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href=""></a></li>
                         <li><a th:href="@{/test/profess/index}">专业报考测评</a></li>
                         <li><a th:href="@{/test/innovate/index}">创新能力测评</a></li>
                         <li><a th:href="@{/test/business/index}">创业能力测评</a></li>
@@ -42,7 +42,8 @@
                 </li>
 
             </ul>
-            <ul class="nav navbar-top-links navbar-right">
+            <ul class="nav navbar-top-links navbar-right nav-user">
+                <li><small><i class="fa fa-user-circle-o"></i>学生：张三丰</small></li>
                 <li>
                     <a th:href="@{/logout}">
                         <i class="fa fa-sign-out"></i> 退出

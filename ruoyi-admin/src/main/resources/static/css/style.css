@@ -626,9 +626,9 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     font-size: 14px;
 }
 
-.top-navigation .navbar-nav .open .dropdown-menu>li>a, .top-navigation .navbar-nav .open .dropdown-menu .dropdown-header {
+/*.top-navigation .navbar-nav .open .dropdown-menu>li>a, .top-navigation .navbar-nav .open .dropdown-menu .dropdown-header {
     padding: 10px 15px 10px 20px;
-}
+}*/
 
 @media ( max-width : 768px) {
     .top-navigation .navbar-header {
@@ -3164,7 +3164,7 @@ video {
 }
 
 #page-wrapper {
-    padding: 0 15px;
+    /*padding: 0 15px;*/
     position: inherit;
     margin: 0 0 0 200px;
 }
@@ -7065,4 +7065,76 @@ body.rtls .top-navigation .footer.fixed, body.rtls.top-navigation .footer.fixed 
 	top: 0px;
 	z-index: 9998;
 	margin: 0;
+}
+
+
+/*学生能力测评系统 自定义样式*/
+.sys_name img {
+    width:30px;
+    height:30px;
+    display:inline-block;
+    margin:10px 8px 8px 8px;
+    vertical-align:top;
+}
+
+.sys_name a {
+    display:inline-block!important;
+    padding:0px!important;
+    margin-top:17px;
+    margin-right:20px;
+    color:rgb(24, 166, 137)!important;
+    font-size:20px;
+}
+
+.nav-user {
+    padding-right:15px!important;
+}
+
+.nav-user i {
+    margin-right:3px;
+    font-size:unset!important;
+}
+
+#header {
+    width:100%;
+    padding:0;
+}
+
+.stufooter {
+    width:100%;
+    height:200px;
+    background-color:#2f4050;
+    font-size:12px;
+    margin:200px 0 0 0!important;
+    padding:30px 0;
+}
+
+.stufooter-line {
+    width:100%;
+    background-color:rgb(24, 166, 137);
+    height:3px;
+}
+
+.stufooter-info {
+    margin-top:40px;
+}
+
+.stufooter-info .row .col-md-4 .list-group .list-group-item {
+    border-radius: 0!important;
+    border:1px solid #ffffff;
+    color:rgb(24, 166, 137);
+}
+
+.stufooter-info .row .col-md-4 .list-group .active {
+    background-color: rgb(24, 166, 137);
+    color:#ffffff;
+    font-size: 14px;
+}
+
+.stufooter-info .row .col-md-4 .list-group .list-group-item a {
+    color:rgb(24, 166, 137)
+}
+
+.stufooter-info .row .col-md-4 .list-group a:hover {
+    color:#ffffff;
 }

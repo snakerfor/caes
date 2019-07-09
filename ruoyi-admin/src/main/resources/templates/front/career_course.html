@@ -18,17 +18,12 @@
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <link th:href="@{/css/skins.css}" rel="stylesheet"/>
     <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
-    <style type="text/css">
-        .sys_name {
-            font-size: 26px;
-            color: green;
-        }
-    </style>
+
 </head>
 <body class="top-navigation">
 <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
-        <div id="header" class="container" style="padding-top: 10px;">
+        <div id="header" class="container">
         </div>
         <div class="wrapper wrapper-content" style="padding-top: 20px;">
             <div class="container">
@@ -37,6 +32,14 @@
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <h5>职业历程</h5>
+                                <div class="ibox-tools">
+                                    <div class="ibox-right">
+                                        <ol class="breadcrumb">
+                                            <li>个人信息</li>
+                                            <li class="active">职业历程</li>
+                                        </ol>
+                                    </div>
+                                </div>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-striped">
@@ -78,8 +81,10 @@
             </div>
 
         </div>
+        <div id="footer">
+
+        </div>
     </div>
-</div>
 </div>
 <!-- 全局js -->
 <script th:src="@{/js/jquery.min.js}"></script>
@@ -97,7 +102,8 @@
         /}]];
         $(function () {
             $("#header").load(ctx + "header");
-        });
+            $("#footer").load(ctx + "footer");
+        })
 </script>
 </body>
 </html>

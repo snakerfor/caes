@@ -18,17 +18,35 @@
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <link th:href="@{/css/skins.css}" rel="stylesheet"/>
     <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
-    <style type="text/css">
-        .sys_name {
-            font-size:26px;
-            color: green;
-        }
-    </style>
+
 </head>
 <body class="top-navigation">
+<!-- 测评结果详情模态框 -->
+<div class="modal inmodal" id="Detail" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title">评测详情</h4>
+                <small class="font-bold">有关您评测报告的分析结论与建议</small>
+            </div>
+
+            <small class="font-bold">
+            <div class="modal-body">
+                <p><strong>张三丰</strong>测评信息经大数据分析得出结论，适于做会计相关工作......</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">分享...</button>
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+            </div>
+            </small>
+        </div>
+    </div>
+</div>
+
 <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
-        <div id="header" class="container" style="padding-top: 10px;">
+        <div id="header" class="container">
         </div>
         <div class="wrapper wrapper-content" style="padding-top: 20px;">
             <div class="container">
@@ -38,21 +56,10 @@
                             <div class="ibox-title">
                                 <h5>历史评测报告</h5>
                                 <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <i class="fa fa-wrench"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">配置选项 1</a>
-                                        </li>
-                                        <li><a href="#">配置选项 2</a>
-                                        </li>
-                                    </ul>
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
+                                    <ol class="breadcrumb">
+                                        <li>结果查询</li>
+                                        <li class="active">测评报告</li>
+                                    </ol>
                                 </div>
                             </div>
                             <div class="ibox-content">
@@ -85,6 +92,7 @@
                                             <th>评测类型</th>
                                             <th>评测结果</th>
                                             <th>评测时间</th>
+                                            <th>操作</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -95,6 +103,7 @@
                                             <td>报考专业测评</td>
                                             <td>旅游管理专业</td>
                                             <td>2019.06.22</td>
+                                            <td><button type="button" class="btn btn-w-m btn-info" onclick="ShowDetail();">查看详情</button></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -103,6 +112,7 @@
                                             <td>创新能力测评</td>
                                             <td>良好</td>
                                             <td>2019.06.22</td>
+                                            <td><button type="button" class="btn btn-w-m btn-info" onclick="ShowDetail();">查看详情</button></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -116,8 +126,12 @@
 
             </div>
         </div>
+        <div id="footer">
+
+        </div>
     </div>
 </div>
+
 <!-- 全局js -->
 <script th:src="@{/js/jquery.min.js}"></script>
 <script th:src="@{/js/bootstrap.min.js}"></script>
@@ -133,7 +147,13 @@
     var ctx = [[@{/}]];
         $(function () {
             $("#header").load(ctx+"header");
-        });
+            $("#footer").load(ctx + "footer");
+        })
+
+        //模态框详情
+        function ShowDetail() {
+            $("#Detail").modal('show');
+        }
 </script>
 </body>
 </html>

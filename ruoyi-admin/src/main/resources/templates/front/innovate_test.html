@@ -18,28 +18,32 @@
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <link th:href="@{/css/skins.css}" rel="stylesheet"/>
     <link th:href="@{/ruoyi/css/ry-ui.css?v=3.4.0}" rel="stylesheet"/>
-    <style type="text/css">
-        .sys_name {
-            font-size:26px;
-            color: green;
-        }
-    </style>
+
 </head>
 
 <body class="top-navigation">
 <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
-        <div id="header" class="container" style="padding-top: 10px;">
+        <div id="header" class="container">
         </div>
         <div class="wrapper wrapper-content" style="padding-top: 20px;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>创新能力测评</h5>
+                                <div class="ibox-tools">
+                                    <div class="ibox-right">
+                                        <ol class="breadcrumb">
+                                            <li>能力测评</li>
+                                            <li class="active">创新能力测评</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="ibox-content">
-                                <div></div>
                                 <form method="get" class="form-horizontal">
-                                    <legend>创新能力测评：</legend>
                                     <div class="form-group">
                                         <label class="col-sm-6 control-label">1、是否对某些物理现象感兴趣？
                                         </label>
@@ -152,7 +156,7 @@
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-5">
-                                            <button class="btn btn-primary" type="submit">提交答案</button>
+                                            <button class="btn btn-primary" type="submit" id="submit">提交答案</button>
                                             <button class="btn btn-white" type="submit">退出测试</button>
                                         </div>
                                     </div>
@@ -163,9 +167,11 @@
                 </div>
             </div>
         </div>
+        <div id="footer">
+
+        </div>
     </div>
 
-</div>
 </div>
 
 <!-- 全局js -->
@@ -183,7 +189,13 @@
     var ctx = [[@{/}]];
         $(function () {
             $("#header").load(ctx+"header");
-        });
+            $("#footer").load(ctx + "footer");
+        })
+
+        //提交并跳转页面
+        $("#submit").click(function () {
+            window.open("http://" + window.location.host + "/test/test_report/index");
+        })
 </script>
 </body>
 </html>
