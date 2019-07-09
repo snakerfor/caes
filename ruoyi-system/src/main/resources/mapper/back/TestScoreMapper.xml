@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.back.mapper.TestScoreMapper">
+    
+    <resultMap type="TestScore" id="TestScoreResult">
+        <result property="scoreId" column="score_id"/>
+        <result property="studentId" column="student_id"/>
+        <result property="courseId" column="course_id"/>
+        <result property="courseName" column="course_name"/>
+        <result property="score" column="score"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+    
+    <sql id="selectTestScoreVo">
+        select score_id,student_id, course_id, course_name, score,create_by, create_time, update_by, update_time, remark
+		from test_score
+    </sql>
+
+    <select id="selectTestScoreById" parameterType="Long" resultMap="TestScoreResult">
+        <include refid="selectTestScoreVo"/>
+        where score_id = #{scoreId}
+    </select>
+
+    <select id="selectTestScoreList" parameterType="TestScore" resultMap="TestScoreResult">
+        <include refid="selectTestScoreVo"/>
+        <where>
+			<if test="studentId != null and studentId != ''">
+                AND student_id = #{studentId}
+			</if>
+			<if test="courseName != null and courseName != ''">
+                AND course_name like concat('%', #{courseName}, '%')
+			</if>
+			<if test="createBy != null and createBy != ''">
+				AND create_by like concat('%', #{createBy}, '%')
+			</if>
+		</where>
+    </select>
+    
+    <insert id="insertTestScore" parameterType="TestScore">
+        insert into test_score (
+			<if test="studentId != null and studentId != '' ">student_id, </if>
+			<if test="courseId != null and courseId != '' ">course_id, </if>
+			<if test="courseName != null and courseName != '' ">course_name, </if>
+			<if test="score != null and score != '' ">score, </if>
+			<if test="remark != null and remark != ''">remark,</if>
+ 			<if test="createBy != null and createBy != ''">create_by,</if>
+ 			create_time
+ 		)values(
+            <if test="studentId != null and studentId != '' ">#{studentId}, </if>
+            <if test="courseId != null and courseId != '' ">#{courseId}, </if>
+            <if test="courseName != null and courseName != '' ">#{courseName}, </if>
+            <if test="score != null and score != '' ">#{score}, </if>
+            <if test="remark != null and remark != ''">#{remark},</if>
+            <if test="createBy != null and createBy != ''">#{createBy},</if>
+            sysdate()
+		)
+    </insert>
+	 
+    <update id="updateTestScore" parameterType="TestScore">
+        update test_score
+        <set>
+            <if test="studentId != null and studentId != '' ">student_id = #{studentId}, </if>
+            <if test="courseId != null and courseId != '' ">course_id = #{courseId}, </if>
+            <if test="courseName != null and courseName != '' ">course_name = #{courseName}, </if>
+            <if test="score != null and score != '' ">score = #{score}, </if>
+            <if test="updateBy != null and updateBy != ''">update_by = #{updateBy},</if>
+ 			update_time = sysdate()
+        </set>
+        where score_id = #{scoreId}
+    </update>
+	
+    <delete id="deleteTestScoreByIds" parameterType="String">
+        delete from test_score where score_id in
+        <foreach item="scoreId" collection="array" open="(" separator="," close=")">
+            #{scoreId}
+        </foreach>
+    </delete>
+    
+</mapper>

@@ -23,7 +23,7 @@ public class TestReport extends BaseEntity
     private Long reportId;
 
     /** 部门ID */
-    private Long studentId;
+    private String studentId;
 
     /** 部门父ID */
     private String testType;
@@ -39,11 +39,11 @@ public class TestReport extends BaseEntity
         this.reportId = reportId;
     }
 
-    public Long getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(Long studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
