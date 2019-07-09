@@ -1,5 +1,7 @@
 **基于深度学习的学生综合能力测评系统** 
 
-版本历程：sss dangmang
-dev1.0  基础框架搭建，使用RuoYi mysql 版本  2019.6.28 江
+版本历程：
+dev1.0  基础框架搭建，使用RuoYi mysql 版本  2019.6.28 by Snaker
+dev1.0  后台管理页面保洁，添加“报告查询”功能  2019.7.8  by Snaker 
+
 
